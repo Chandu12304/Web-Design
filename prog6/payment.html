@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Payment</h1>
+    </header>
+    <main>
+        <form>
+            <input type="text" placeholder="Cardholder Name" required>
+            <input type="text" placeholder="Card Number" required>
+            <input type="number" placeholder="Expiry Date (MM/YY)" required>
+            <input type="number" placeholder="CVV" required>
+            <button type="submit"><a href="./confirmation.html">Pay Now</a></button>
+        </form>
+    </main>
+</body>
+
+</html>

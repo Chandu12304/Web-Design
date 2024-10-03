@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Tasks</h1>
+
+    <!-- Task A: Check Uppercase -->
+    <h2>A. Check First Character Uppercase</h2>
+    <input type="text" id="uppercaseInput" placeholder="Enter a string">
+    <button onclick="checkUppercase()">Check</button>
+    <div class="result" id="uppercaseResult"></div>
+
+    <!-- Task B: Email Validation -->
+    <h2>B. Email Address Validation</h2>
+    <input type="text" id="emailInput" placeholder="Enter your email">
+    <button onclick="validateEmail()">Validate Email</button>
+    <div class="result" id="emailResult"></div>
+
+    <!-- Task C: Format Integer -->
+    <h2>C. Format Integer with Commas</h2>
+    <input type="number" id="numberInput" placeholder="Enter an integer">
+    <button onclick="formatNumber()">Format Number</button>
+    <div class="result" id="numberResult"></div>
+
+    <script>
+        // Task A: Check if the first character is uppercase
+        function checkUppercase() {
+            const input = document.getElementById("uppercaseInput").value;
+            const result = /^[A-Z]/.test(input);
+            document.getElementById("uppercaseResult").textContent = result ? "First character is uppercase." : "First character is not uppercase.";
+        }
+
+        // Task B: Validate email address
+        function validateEmail() {
+            const email = document.getElementById("emailInput").value;
+            const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const result = pattern.test(email);
+            document.getElementById("emailResult").textContent = result ? "Valid email address." : "Invalid email address.";
+        }
+
+        // Task C: Format integer with commas
+        function formatNumber() {
+            const number = document.getElementById("numberInput").value;
+            const formatted = number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            document.getElementById("numberResult").textContent = formatted;
+        }
+    </script>
+</body>
+
+</html>
